@@ -1,0 +1,3 @@
+/home/bodzisz/University/EffectiveProgrammingTechniques/List01/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/bodzisz/University/EffectiveProgrammingTechniques/List01/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/bodzisz/University/EffectiveProgrammingTechniques/List01/cmake-build-debug/CMakeFiles/List01.dir
