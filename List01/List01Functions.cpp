@@ -8,14 +8,18 @@ void List01Functions::vAllocTableAdd5(int iSize)
     {
         std::cout << "Wrong size of the table" << std::endl;
     }
+    else
+    {
 
-    int *dynamicAllocTable = new int[iSize];
-    for(int i = 0; i < iSize; i++) {
-        dynamicAllocTable[i] = i + 5;
-        std::cout << dynamicAllocTable[i] << std::endl;
+        int *dynamicAllocTable = new int[iSize];
+        for (int i = 0; i < iSize; i++)
+        {
+            dynamicAllocTable[i] = i + 5;
+            std::cout << dynamicAllocTable[i] << std::endl;
+        }
+
+        delete[] dynamicAllocTable;
     }
-
-    delete [] dynamicAllocTable;
 }
 
 bool List01Functions::bAllocTable2Dim(int ***piTable, int iSizeX, int iSizeY)
