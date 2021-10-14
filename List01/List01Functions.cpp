@@ -57,3 +57,13 @@ bool List01Functions::bDeallocTable2Dim(int **piTable, int iSizeX, int iSizeY)
 
     return true;
 }
+
+void List01Functions::v_mod_tab(CTable *pcTab, int iNewSize) {
+    std::cout << "Setting size to new value: " <<  iNewSize << std::endl;
+    pcTab->bSetNewSize(iNewSize);
+}
+
+void List01Functions::v_mod_tab(CTable cTab, int iNewSize) {
+    std::cout << "Setting size to new value: " << iNewSize << std::endl;
+    cTab.bSetNewSize(iNewSize);
+}

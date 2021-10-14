@@ -23,8 +23,6 @@ public:
     ~CTable();
 
     CTable *pcClone();
-    void v_mod_tab(CTable *pcTab, int iNewSize);
-    void v_mod_tab(CTable cTab, int iNewSize);
 
     // setters
     void vSetName(std::string sName);
@@ -33,6 +31,7 @@ public:
     // getters
     std::string getName();
     int* getTable();
+    int getTableSize();
 
 private:
      void copyTable(int* table1, int* table2, int tableSize);

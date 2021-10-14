@@ -6,13 +6,25 @@
 
 #IncludeRegexTransform: 
 
+/home/bodzisz/University/EffectiveProgrammingTechniques/List01/CTable.cpp
+CTable.h
+/home/bodzisz/University/EffectiveProgrammingTechniques/List01/CTable.h
+
 /home/bodzisz/University/EffectiveProgrammingTechniques/List01/CTable.h
 string
 -
 iostream
 -
 
+/home/bodzisz/University/EffectiveProgrammingTechniques/List01/List01Functions.cpp
+List01Functions.h
 /home/bodzisz/University/EffectiveProgrammingTechniques/List01/List01Functions.h
+iostream
+-
+
+/home/bodzisz/University/EffectiveProgrammingTechniques/List01/List01Functions.h
+CTable.h
+/home/bodzisz/University/EffectiveProgrammingTechniques/List01/CTable.h
 
 /home/bodzisz/University/EffectiveProgrammingTechniques/List01/main.cpp
 iostream

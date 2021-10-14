@@ -70,7 +70,6 @@ bool CTable::bSetNewSize(int iTableLen) {
     tableSize = iTableLen;
     table = newTable;
 
-    delete [] newTable;
 }
 
 CTable *CTable::pcClone() {
@@ -89,14 +88,10 @@ void CTable::copyTable(int *table1, int *table2, int tableSize)
     }
 }
 
-void CTable::v_mod_tab(CTable *pcTab, int iNewSize) {
-    std::cout << &"Setting size to new value: " [ iNewSize] << std::endl;
-    pcTab->bSetNewSize(iNewSize);
-}
 
-void CTable::v_mod_tab(CTable cTab, int iNewSize) {
-    std::cout << &"Setting size to new value: " [ iNewSize] << std::endl;
-    cTab.bSetNewSize(iNewSize);
+int CTable::getTableSize()
+{
+    return tableSize;
 }
 
 
