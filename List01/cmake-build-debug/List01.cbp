@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/bodzisz/University/EffectiveProgrammingTechniques/List01/CTable.cpp">
+			<Option target="List01"/>
+		</Unit>
+		<Unit filename="/home/bodzisz/University/EffectiveProgrammingTechniques/List01/CTable.h">
+			<Option target="List01"/>
+		</Unit>
 		<Unit filename="/home/bodzisz/University/EffectiveProgrammingTechniques/List01/List01Functions.cpp">
 			<Option target="List01"/>
 		</Unit>

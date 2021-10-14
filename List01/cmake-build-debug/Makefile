@@ -129,6 +129,30 @@ List01/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/List01.dir/build.make CMakeFiles/List01.dir/build
 .PHONY : List01/fast
 
+CTable.o: CTable.cpp.o
+.PHONY : CTable.o
+
+# target to build an object file
+CTable.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/List01.dir/build.make CMakeFiles/List01.dir/CTable.cpp.o
+.PHONY : CTable.cpp.o
+
+CTable.i: CTable.cpp.i
+.PHONY : CTable.i
+
+# target to preprocess a source file
+CTable.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/List01.dir/build.make CMakeFiles/List01.dir/CTable.cpp.i
+.PHONY : CTable.cpp.i
+
+CTable.s: CTable.cpp.s
+.PHONY : CTable.s
+
+# target to generate assembly for a file
+CTable.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/List01.dir/build.make CMakeFiles/List01.dir/CTable.cpp.s
+.PHONY : CTable.cpp.s
+
 List01Functions.o: List01Functions.cpp.o
 .PHONY : List01Functions.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... List01"
+	@echo "... CTable.o"
+	@echo "... CTable.i"
+	@echo "... CTable.s"
 	@echo "... List01Functions.o"
 	@echo "... List01Functions.i"
 	@echo "... List01Functions.s"
