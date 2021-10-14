@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/bodzisz/University/EffectiveProgrammingTechniques/List01/CTable.cpp" "/home/bodzisz/University/EffectiveProgrammingTechniques/List01/cmake-build-debug/CMakeFiles/List01.dir/CTable.cpp.o"
   "/home/bodzisz/University/EffectiveProgrammingTechniques/List01/List01Functions.cpp" "/home/bodzisz/University/EffectiveProgrammingTechniques/List01/cmake-build-debug/CMakeFiles/List01.dir/List01Functions.cpp.o"
   "/home/bodzisz/University/EffectiveProgrammingTechniques/List01/main.cpp" "/home/bodzisz/University/EffectiveProgrammingTechniques/List01/cmake-build-debug/CMakeFiles/List01.dir/main.cpp.o"
   )

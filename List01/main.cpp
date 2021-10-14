@@ -1,5 +1,6 @@
 #include <iostream>
 #include "List01Functions.h"
+#include "CTable.h"
 
 int main()
 {
@@ -23,6 +24,20 @@ int main()
     }
 
     functions.bDeallocTable2Dim(piTable, iSizeX, iSizeY);
+
+    // Zad 4
+
+    CTable *myTable1 = new CTable();
+    CTable *myTable2 = new CTable("myName", 5);
+    int *myTable2Nums = myTable2->getTable();
+    for(int i = 0; i < 5; i++)
+    {
+       myTable2Nums[0] = i;
+    }
+
+    delete myTable1;
+    delete myTable2;
+
 
     return 0;
 }

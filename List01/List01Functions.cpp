@@ -8,12 +8,10 @@ void List01Functions::vAllocTableAdd5(int iSize)
     {
         std::cout << "Wrong size of the table" << std::endl;
     }
-    else
-    {
+    else {
 
         int *dynamicAllocTable = new int[iSize];
-        for (int i = 0; i < iSize; i++)
-        {
+        for (int i = 0; i < iSize; i++) {
             dynamicAllocTable[i] = i + 5;
             std::cout << dynamicAllocTable[i] << std::endl;
         }
