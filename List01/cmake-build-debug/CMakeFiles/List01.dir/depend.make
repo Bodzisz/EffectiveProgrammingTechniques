@@ -5,6 +5,7 @@ CMakeFiles/List01.dir/CTable.cpp.o: \
  ../CTable.cpp \
  ../CTable.h
 CMakeFiles/List01.dir/List01Functions.cpp.o: \
+ ../CTable.h \
  ../List01Functions.cpp \
  ../List01Functions.h
 CMakeFiles/List01.dir/main.cpp.o: \
