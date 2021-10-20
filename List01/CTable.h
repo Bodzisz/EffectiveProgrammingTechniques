@@ -9,6 +9,7 @@
 #include <iostream>
 
 const int defaultTableSize = 10;
+const std::string defaultName = "defaultName";
 
 class CTable {
 private:

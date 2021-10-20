@@ -7,9 +7,9 @@
 
 CTable::CTable()
 {
-    this->sName = "defaultName";
-    this->tableSize = defaultTableSize;
-    this->table = new int[tableSize];
+    sName = defaultName;
+    tableSize = defaultTableSize;
+    table = new int[tableSize];
 
     std::cout << "bezp:" + sName << std::endl;
 }
@@ -18,11 +18,11 @@ CTable::CTable(std::string sName, int iTableLen)
 {
     if(iTableLen <= 0)
     {
-        this->tableSize = defaultTableSize;
+        tableSize = defaultTableSize;
     }
     else
     {
-        this->tableSize = iTableLen;
+        tableSize = iTableLen;
     }
     this->sName = sName;
     this->table = new int[tableSize];
@@ -30,13 +30,10 @@ CTable::CTable(std::string sName, int iTableLen)
 
 CTable::CTable(CTable &pcOther)
 {
-    this->sName = pcOther.sName + "_copy";
-    this->tableSize = sizeof(pcOther.table) / sizeof(pcOther.table[0]);
-    this->table = new int[tableSize];
-    for(int i = 0; i < tableSize; i++)
-    {
-        table[i] = pcOther.table[i];
-    }
+    sName = pcOther.sName + "_copy";
+    tableSize = sizeof(pcOther.table) / sizeof(pcOther.table[0]);
+    table = new int[tableSize];
+    this->copyTable(pcOther.table, table, pcOther.tableSize);
 }
 
 CTable::~CTable()
@@ -58,26 +55,30 @@ void CTable::vSetName(std::string sName) {
 }
 
 bool CTable::bSetNewSize(int iTableLen) {
-    if(iTableLen < tableSize)
+    if(iTableLen <= 0)
     {
         std::cout << "Invalid length to set" << std::endl;
         return false;
     }
-
     int *newTable = new int[iTableLen];
-    this->copyTable(table, newTable, tableSize);
+    if(iTableLen < tableSize)
+    {
+        this->copyTable(table, newTable, iTableLen);
+    }
+    else
+    {
+        this->copyTable(table, newTable, tableSize);
+    }
 
     tableSize = iTableLen;
     table = newTable;
 
+    return true;
+
 }
 
 CTable *CTable::pcClone() {
-    CTable *copy = new CTable(sName, tableSize);
-
-    this->copyTable(table, copy->table, tableSize);
-
-    return copy;
+    return new CTable(*this);
 }
 
 void CTable::copyTable(int *table1, int *table2, int tableSize)
