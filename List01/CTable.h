@@ -35,7 +35,7 @@ public:
     int getTableSize();
 
 private:
-     void copyTable(int* table1, int* table2, int tableSize);
+     void copyTable(const int* table1, int* table2, int tableSize);
 };
 
 

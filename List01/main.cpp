@@ -51,8 +51,27 @@ int main()
 
     std::cout << "\n\n";
 
+    std::cout << "Old tab:" << std::endl;
+    std::cout << "Name:" << myTable2->getName() << " table: " << std::endl;
+    for(int i = 0; i < myTable2->getTableSize(); i++)
+    {
+        std::cout << myTable2->getTable()[i] << " ";
+    }
+    std::cout << "\n";
+
+    CTable *newTab = myTable2->pcClone();
+    std::cout << "New tab:" << std::endl;
+    std::cout << "Name:" << newTab->getName() << " table: " << std::endl;
+    for(int i = 0; i < newTab->getTableSize(); i++)
+    {
+        std::cout << newTab->getTable()[i] << " ";
+    }
+    std::cout << "\n";
+
+
     delete myTable1;
     delete myTable2;
+    delete newTab;
 
 
     return 0;

@@ -31,7 +31,7 @@ CTable::CTable(std::string sName, int iTableLen)
 CTable::CTable(CTable &pcOther)
 {
     sName = pcOther.sName + "_copy";
-    tableSize = sizeof(pcOther.table) / sizeof(pcOther.table[0]);
+    tableSize = pcOther.tableSize;
     table = new int[tableSize];
     this->copyTable(pcOther.table, table, pcOther.tableSize);
 }
@@ -76,12 +76,12 @@ bool CTable::bSetNewSize(int iTableLen) {
     return true;
 
 }
-
+// Pytanie czy nazwa klona ma mieć dopisek w sName _copy ?
 CTable *CTable::pcClone() {
     return new CTable(*this);
 }
 
-void CTable::copyTable(int *table1, int *table2, int tableSize)
+void CTable::copyTable(const int *table1, int *table2, int tableSize)
 {
     for(int i = 0; i < tableSize; i++)
     {
