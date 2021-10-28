@@ -6,19 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/bodzisz/University/EffectiveProgrammingTechniques/List02/CTable.cpp
-CTable.h
-/home/bodzisz/University/EffectiveProgrammingTechniques/List02/CTable.h
-
 /home/bodzisz/University/EffectiveProgrammingTechniques/List02/CTable.h
 string
 -
-iostream
--
-
-/home/bodzisz/University/EffectiveProgrammingTechniques/List02/List01Functions.cpp
-List01Functions.h
-/home/bodzisz/University/EffectiveProgrammingTechniques/List02/List01Functions.h
 iostream
 -
 

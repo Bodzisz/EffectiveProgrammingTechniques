@@ -82,6 +82,8 @@ int main()
 
     tab00.setTable((tab00 + tab01), tab00.getTableSize() + tab01.getTableSize());
     tab00.print();
+    tab00.setTable((*myTable1 + *myTable2), myTable1->getTableSize() + myTable2->getTableSize());
+    tab00.print();
 
 
     delete myTable1;
