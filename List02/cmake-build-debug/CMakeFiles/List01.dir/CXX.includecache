@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bodzisz/University/EffectiveProgrammingTechniques/List02/CTable.h
+string
+-
+iostream
+-
+
+/home/bodzisz/University/EffectiveProgrammingTechniques/List02/List01Functions.h
+CTable.h
+/home/bodzisz/University/EffectiveProgrammingTechniques/List02/CTable.h
+
+/home/bodzisz/University/EffectiveProgrammingTechniques/List02/main.cpp
+iostream
+-
+List01Functions.h
+/home/bodzisz/University/EffectiveProgrammingTechniques/List02/List01Functions.h
+CTable.h
+/home/bodzisz/University/EffectiveProgrammingTechniques/List02/CTable.h
+
