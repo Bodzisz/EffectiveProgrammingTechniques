@@ -42,21 +42,32 @@ int main()
     tab00.print();
     tab01.print();
 
-//    tab00.setTable((tab00 + tab01), tab00.getTableSize() + tab01.getTableSize());
-//    tab00.print();
-//    tab00.setTable((*myTable1 + *myTable2), myTable1->getTableSize() + myTable2->getTableSize());
-//    tab00.print();
 
-    CTable* mergedTab = tab00 + tab01;
+    CTable mergedTab = (tab00 + tab01);
     std::cout << "\nMERGED TAB: " << std::endl;
-    mergedTab->print();
+    mergedTab.print();
+    std::cout << "\n\n";
+
+    CTable entranceTab ("myName123", 10);
+    entranceTab.setNewValueAt(1,100);
+    entranceTab.setNewValueAt(2,2);
+    entranceTab.print();
+
+    entranceTab *= 2;
+    entranceTab.print();
+
+    CTable anotherTable("sfsadsa", 5);;
+    anotherTable.setNewValueAt(0,2);
+    anotherTable.setNewValueAt(1,5);
+    entranceTab = (anotherTable * 2);
+    entranceTab.print();
 
     std::cout << "\n\n";
 
     delete myTable1;
     delete myTable2;
     delete newTab;
-    delete mergedTab;
+
 
 
     return 0;

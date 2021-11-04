@@ -25,14 +25,16 @@ CTable::CTable(std::string sName, int tableSize)
         this->tableSize = tableSize;
     }
     this->name = sName;
-    this->table = new int[tableSize];
+    this->table = new int[this->tableSize];
+    fillWithZeros();
 }
 
-CTable::CTable(CTable &pcOther)
+CTable::CTable(const CTable &pcOther)
 {
     name = pcOther.name;
     tableSize = pcOther.tableSize;
     table = new int[tableSize];
+    fillWithZeros();
     this->copyTable(pcOther.table, table, pcOther.tableSize);
 }
 
@@ -63,12 +65,14 @@ bool CTable::setNewSize(int iTableLen) {
     int *newTable = new int[iTableLen];
     if(iTableLen < tableSize)
     {
-        this->copyTable(table, newTable, 0,  iTableLen);
+        this->copyTable(table, newTable, iTableLen);
     }
     else
     {
-        this->copyTable(table, newTable, 0, tableSize);
+        this->copyTable(table, newTable, tableSize);
     }
+
+    delete [] table;
 
     tableSize = iTableLen;
     table = newTable;
@@ -81,17 +85,17 @@ CTable *CTable::pcClone() {
     return new CTable(*this);
 }
 
-void CTable::copyTable(const int *copyFromTable, int *copyToTable, int startIndex, int tableSize)
+void CTable::copyTable(const int *copyFromTable, int *copyToTable, int startIndex, int copyFromTableSize)
 {
-    for(int i = 0; i < tableSize; i++)
+    for(int i = 0; i < copyFromTableSize; i++)
     {
         copyToTable[startIndex + i] = copyFromTable[i];
     }
 }
 
-void CTable::copyTable(int *copyFromTable, int *copyToTable, int tableSize)
+void CTable::copyTable(int *copyFromTable, int *copyToTable, int copyFromTableSize)
 {
-    copyTable(copyToTable, copyFromTable, 0, tableSize);
+    copyTable(copyFromTable, copyToTable, 0, copyFromTableSize);
 }
 
 int CTable::getTableSize() const
@@ -104,25 +108,44 @@ int CTable::getTableSize() const
 //    tableSize = pcOther.tableSize;
 //}
 
-void CTable::operator=(CTable &pcOther) {
+CTable& CTable::operator=(CTable pcOther)
+{
+    if (this == &pcOther)
+    {
+        return *this;
+    }
+
+    delete [] table;
     tableSize = pcOther.tableSize;
     table = new int[tableSize];
     copyTable(pcOther.table, table, tableSize);
+    return *this;
 }
 
-//int* CTable::operator+(CTable &pcOther) {
-//    int* resultTable = new int[tableSize + pcOther.tableSize];
-//    copyTable(table, resultTable, tableSize);
-//    copyTable(pcOther.table, resultTable, tableSize, pcOther.tableSize);
-//    return resultTable;
-//}
 
-CTable* CTable::operator+(CTable &pcOther)
+CTable CTable::operator+(CTable pcOther)
 {
-    CTable* result = new CTable();
-    result->setNewSize(tableSize + pcOther.tableSize);
-    copyTable(table, result->table, tableSize);
-    copyTable(pcOther.table, result->table, tableSize, pcOther.tableSize);
+    CTable result(defaultName, tableSize + pcOther.tableSize);
+    copyTable(table, result.table, tableSize);
+    copyTable(pcOther.table, result.table, tableSize, pcOther.tableSize);
+    return result;
+}
+
+CTable CTable::operator*=(int multiplicator) {
+    for(int i = 0; i < tableSize; i++)
+    {
+        table[i] *= multiplicator;
+    }
+    return *this;
+}
+
+CTable CTable::operator*(int multiplicator)
+{
+    CTable result(*this);
+    for(int i = 0; i < result.tableSize; i++)
+    {
+        result.table[i] *= multiplicator;
+    }
     return result;
 }
 
@@ -151,6 +174,18 @@ void CTable::setTable(int *table, int tableSize) {
     this->table = table;
     this->tableSize = tableSize;
 }
+
+void CTable::fillWithZeros()
+{
+    for(int i = 0; i < tableSize; i++)
+    {
+        table[i] = 0;
+    }
+}
+
+
+
+
 
 
 

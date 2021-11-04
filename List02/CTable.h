@@ -20,7 +20,7 @@ private:
 public:
     CTable();
     CTable (std::string name, int tableSize);
-    CTable (CTable &pcOther);
+    CTable (const CTable &pcOther);
     ~CTable();
 
     CTable *pcClone();
@@ -28,9 +28,10 @@ public:
     void print();
     void setNewValueAt(int offset, int newVal);
 
-    void operator=(CTable &pcOther);
-    //int* operator+(CTable &pcOther);
-    CTable* operator+(CTable &pcOther);
+    CTable& operator=(CTable pcOther);
+    CTable operator+(CTable pcOther);
+    CTable operator*(int multiplicator);
+    CTable operator*=(int multiplicator);
 
     // setters
     void setName(std::string name);
@@ -43,8 +44,9 @@ public:
     int getTableSize() const;
 
 private:
-     void copyTable(int *copyFromTable, int *copyToTable, int tableSize);
-     void copyTable(const int *copyFromTable, int *copyToTable, int startIndex, int tableSize);
+     void copyTable(int *copyFromTable, int *copyToTable, int copyFromTableSize);
+     void copyTable(const int *copyFromTable, int *copyToTable, int startIndex, int copyFromTableSize);
+     void fillWithZeros();
 };
 
 
