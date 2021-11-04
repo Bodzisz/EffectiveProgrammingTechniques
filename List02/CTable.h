@@ -29,7 +29,8 @@ public:
     void setNewValueAt(int offset, int newVal);
 
     void operator=(CTable &pcOther);
-    int* operator+(CTable &pcOther);
+    //int* operator+(CTable &pcOther);
+    CTable* operator+(CTable &pcOther);
 
     // setters
     void setName(std::string name);

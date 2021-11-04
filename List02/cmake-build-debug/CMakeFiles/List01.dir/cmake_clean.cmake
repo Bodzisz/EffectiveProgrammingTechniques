@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/List01.dir/CTable.cpp.o"
-  "CMakeFiles/List01.dir/List01Functions.cpp.o"
   "CMakeFiles/List01.dir/main.cpp.o"
   "List01"
   "List01.pdb"

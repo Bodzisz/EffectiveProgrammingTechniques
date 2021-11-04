@@ -110,11 +110,20 @@ void CTable::operator=(CTable &pcOther) {
     copyTable(pcOther.table, table, tableSize);
 }
 
-int* CTable::operator+(CTable &pcOther) {
-    int* resultTable = new int[tableSize + pcOther.tableSize];
-    copyTable(table, resultTable, tableSize);
-    copyTable(pcOther.table, resultTable, tableSize, pcOther.tableSize);
-    return resultTable;
+//int* CTable::operator+(CTable &pcOther) {
+//    int* resultTable = new int[tableSize + pcOther.tableSize];
+//    copyTable(table, resultTable, tableSize);
+//    copyTable(pcOther.table, resultTable, tableSize, pcOther.tableSize);
+//    return resultTable;
+//}
+
+CTable* CTable::operator+(CTable &pcOther)
+{
+    CTable* result = new CTable();
+    result->setNewSize(tableSize + pcOther.tableSize);
+    copyTable(table, result->table, tableSize);
+    copyTable(pcOther.table, result->table, tableSize, pcOther.tableSize);
+    return result;
 }
 
 void CTable::print()
@@ -142,6 +151,7 @@ void CTable::setTable(int *table, int tableSize) {
     this->table = table;
     this->tableSize = tableSize;
 }
+
 
 
 

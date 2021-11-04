@@ -90,12 +90,6 @@
 		<Unit filename="/home/bodzisz/University/EffectiveProgrammingTechniques/List02/CTable.h">
 			<Option target="List01"/>
 		</Unit>
-		<Unit filename="/home/bodzisz/University/EffectiveProgrammingTechniques/List02/List01Functions.cpp">
-			<Option target="List01"/>
-		</Unit>
-		<Unit filename="/home/bodzisz/University/EffectiveProgrammingTechniques/List02/List01Functions.h">
-			<Option target="List01"/>
-		</Unit>
 		<Unit filename="/home/bodzisz/University/EffectiveProgrammingTechniques/List02/main.cpp">
 			<Option target="List01"/>
 		</Unit>

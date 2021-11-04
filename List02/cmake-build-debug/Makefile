@@ -153,30 +153,6 @@ CTable.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/List01.dir/build.make CMakeFiles/List01.dir/CTable.cpp.s
 .PHONY : CTable.cpp.s
 
-List01Functions.o: List01Functions.cpp.o
-.PHONY : List01Functions.o
-
-# target to build an object file
-List01Functions.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/List01.dir/build.make CMakeFiles/List01.dir/List01Functions.cpp.o
-.PHONY : List01Functions.cpp.o
-
-List01Functions.i: List01Functions.cpp.i
-.PHONY : List01Functions.i
-
-# target to preprocess a source file
-List01Functions.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/List01.dir/build.make CMakeFiles/List01.dir/List01Functions.cpp.i
-.PHONY : List01Functions.cpp.i
-
-List01Functions.s: List01Functions.cpp.s
-.PHONY : List01Functions.s
-
-# target to generate assembly for a file
-List01Functions.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/List01.dir/build.make CMakeFiles/List01.dir/List01Functions.cpp.s
-.PHONY : List01Functions.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -213,9 +189,6 @@ help:
 	@echo "... CTable.o"
 	@echo "... CTable.i"
 	@echo "... CTable.s"
-	@echo "... List01Functions.o"
-	@echo "... List01Functions.i"
-	@echo "... List01Functions.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
