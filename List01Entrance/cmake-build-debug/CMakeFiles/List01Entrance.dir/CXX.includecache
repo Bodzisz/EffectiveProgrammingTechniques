@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bodzisz/Coding C++/List01Entrance/Person.cpp
+Person.h
+/home/bodzisz/Coding C++/List01Entrance/Person.h
+
+/home/bodzisz/Coding C++/List01Entrance/Person.h
+string
+-
+
+/home/bodzisz/Coding C++/List01Entrance/main.cpp
+iostream
+-
+Person.h
+/home/bodzisz/Coding C++/List01Entrance/Person.h
+

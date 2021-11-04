@@ -1,0 +1,3 @@
+/home/bodzisz/Coding C++/List01Entrance/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/bodzisz/Coding C++/List01Entrance/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/bodzisz/Coding C++/List01Entrance/cmake-build-debug/CMakeFiles/List01Entrance.dir
