@@ -24,10 +24,6 @@ NodeStatic::NodeStatic(int value, NodeStatic *parent)
 
 NodeStatic::~NodeStatic()
 {
-//    if(parent != NULL)
-//    {
-//        delete parent;
-//    }
 }
 
 void NodeStatic::setValue(int newValue)
@@ -84,6 +80,11 @@ void NodeStatic::addChild(int childValue)
     children.emplace_back(child);
 }
 
+void NodeStatic::addChild(NodeStatic *child)
+{
+    children.emplace_back(*child);
+}
+
 void NodeStatic::treeTest()
 {
     NodeStatic root;
@@ -110,6 +111,34 @@ void NodeStatic::printUp()
         parent->printUp();
     }
 }
+
+bool NodeStatic::moveSubtree(NodeStatic *parentNode, NodeStatic *newChildNode)
+{
+    if(parentNode == NULL || newChildNode == NULL)
+    {
+        return false;
+    }
+
+    parentNode->addChild(newChildNode);
+
+    if(newChildNode->parent != NULL)
+    {
+        int index;
+        for (int i = 0; i < newChildNode->parent->getChildrenNumber(); i++)
+        {
+            if (&(newChildNode->parent->children[i]) == newChildNode)
+            {
+                index = i;
+                break;
+            }
+        }
+        newChildNode->parent->children.erase(newChildNode->parent->children.begin() + index);
+    }
+
+    newChildNode->parent = parentNode;
+    return true;
+}
+
 
 
 

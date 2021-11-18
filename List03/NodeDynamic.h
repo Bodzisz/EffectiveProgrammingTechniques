@@ -20,20 +20,23 @@ private:
 public:
     NodeDynamic();
     NodeDynamic(int nodeValue);
+    //NodeDynamic(NodeDynamic const& newNode);
     NodeDynamic(int nodeValue, NodeDynamic *parent);
     ~NodeDynamic();
 
     void setValue(int newValue);
     int getChildrenNumber() const;
     void addChild(int childValue);
+    void addChild(NodeDynamic *child);
     NodeDynamic *getChild(int offset);
 
     void print();
     void printAllBelow();
     void deleteChildren();
+    bool moveSubtree(NodeDynamic *parentNode, NodeDynamic *newChildNode);
 
 private:
-    void printAllBelowRecursion(std::queue<NodeDynamic> printQueue);
+    void printAllBelowRecursion(std::queue<NodeDynamic*> printQueue);
 };
 
 

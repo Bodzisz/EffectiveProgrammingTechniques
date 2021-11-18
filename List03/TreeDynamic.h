@@ -18,6 +18,7 @@ public:
 
     NodeDynamic *getRoot();
     void printTree();
+    bool moveSubtree(NodeDynamic *parentNode, NodeDynamic *newChildNode);
 };
 
 

@@ -24,4 +24,9 @@ void TreeDynamic::printTree()
     root->printAllBelow();
 }
 
+bool TreeDynamic::moveSubtree(NodeDynamic *parentNode, NodeDynamic *newChildNode)
+{
+    root->moveSubtree(parentNode, newChildNode);
+}
+
 

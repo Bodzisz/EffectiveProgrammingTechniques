@@ -27,12 +27,14 @@ public:
     int getChildrenNumber() const;
     NodeStatic *getChild(int offset);
     void addChild(int childValue);
+    void addChild(NodeStatic *child);
 
     void print();
     void printAllBelow();
     void printUp();
 
     void treeTest();
+    bool moveSubtree(NodeStatic *parentNode, NodeStatic *newChildNode);
 
 private:
     void printAllBelowRecursion(std::queue<NodeStatic> printQueue);

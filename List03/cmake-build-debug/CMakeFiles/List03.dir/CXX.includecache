@@ -18,6 +18,10 @@ vector
 queue
 -
 
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03/NodeStatic.cpp
+NodeStatic.h
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03/NodeStatic.h
+
 /home/bodzisz/University/EffectiveProgrammingTechniques/List03/NodeStatic.h
 vector
 -
@@ -25,24 +29,4 @@ queue
 -
 iostream
 -
-
-/home/bodzisz/University/EffectiveProgrammingTechniques/List03/TreeDynamic.cpp
-TreeDynamic.h
-/home/bodzisz/University/EffectiveProgrammingTechniques/List03/TreeDynamic.h
-
-/home/bodzisz/University/EffectiveProgrammingTechniques/List03/TreeDynamic.h
-NodeDynamic.h
-/home/bodzisz/University/EffectiveProgrammingTechniques/List03/NodeDynamic.h
-
-/home/bodzisz/University/EffectiveProgrammingTechniques/List03/TreeStatic.h
-NodeStatic.h
-/home/bodzisz/University/EffectiveProgrammingTechniques/List03/NodeStatic.h
-
-/home/bodzisz/University/EffectiveProgrammingTechniques/List03/main.cpp
-iostream
--
-TreeStatic.h
-/home/bodzisz/University/EffectiveProgrammingTechniques/List03/TreeStatic.h
-TreeDynamic.h
-/home/bodzisz/University/EffectiveProgrammingTechniques/List03/TreeDynamic.h
 

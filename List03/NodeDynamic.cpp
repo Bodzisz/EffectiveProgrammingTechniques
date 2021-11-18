@@ -24,10 +24,6 @@ NodeDynamic::NodeDynamic(int nodeValue, NodeDynamic *parent)
 
 NodeDynamic::~NodeDynamic()
 {
-    if(parent != NULL)
-    {
-        delete parent;
-    }
     for(int i = 0; i < getChildrenNumber(); i++)
     {
         children[i]->deleteChildren();
@@ -64,6 +60,11 @@ void NodeDynamic::addChild(int childValue)
     children.emplace_back(new NodeDynamic(childValue, this));
 }
 
+void NodeDynamic::addChild(NodeDynamic *child)
+{
+    children.emplace_back(child);
+}
+
 NodeDynamic *NodeDynamic::getChild(int offset)
 {
     if(offset >= getChildrenNumber() || offset < 0)
@@ -80,27 +81,59 @@ void NodeDynamic::print()
 
 void NodeDynamic::printAllBelow()
 {
-    std::queue<NodeDynamic> printQueue;
+    std::queue<NodeDynamic*> printQueue;
     print();
     for(int i = 0; i < getChildrenNumber(); i++)
     {
-        printQueue.push(*children[i]);
+        printQueue.push(children[i]);
     }
     printAllBelowRecursion(printQueue);
 }
 
-void NodeDynamic::printAllBelowRecursion(std::queue<NodeDynamic> printQueue)
+void NodeDynamic::printAllBelowRecursion(std::queue<NodeDynamic*> printQueue)
 {
     if(!printQueue.empty()) {
-        NodeDynamic currentNode = printQueue.front();
-        currentNode.print();
-        for (int i = 0; i < currentNode.getChildrenNumber(); i++) {
-            printQueue.push(*currentNode.children[i]);
+        NodeDynamic *currentNode = printQueue.front();
+        currentNode->print();
+        for (int i = 0; i < currentNode->getChildrenNumber(); i++) {
+            printQueue.push(currentNode->children[i]);
         }
         printQueue.pop();
         printAllBelowRecursion(printQueue);
+
     }
 }
+
+bool NodeDynamic::moveSubtree(NodeDynamic *parentNode, NodeDynamic *newChildNode)
+{
+    if(parentNode == NULL || newChildNode == NULL)
+    {
+        return false;
+    }
+
+    if(newChildNode->parent != NULL)
+    {
+        int index;
+        for (int i = 0; i < newChildNode->parent->children.size(); i++)
+        {
+            if (newChildNode->parent->children[i] == newChildNode)
+            {
+                index = i;
+                break;
+            }
+        }
+        newChildNode->parent->children.erase(newChildNode->parent->children.begin() + index);
+    }
+
+    newChildNode->parent = parentNode;
+    parentNode->addChild(newChildNode);
+    return true;
+
+}
+
+
+
+
 
 
 
