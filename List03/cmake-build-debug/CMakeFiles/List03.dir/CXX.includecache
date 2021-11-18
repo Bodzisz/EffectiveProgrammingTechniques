@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03/NodeStatic.cpp
+NodeStatic.h
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03/NodeStatic.h
+
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03/NodeStatic.h
+vector
+-
+queue
+-
+iostream
+-
+

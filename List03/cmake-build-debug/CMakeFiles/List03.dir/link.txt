@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/List03.dir/main.cpp.o CMakeFiles/List03.dir/NodeStatic.cpp.o -o List03 
