@@ -1,11 +1,21 @@
 #include <iostream>
-#include "NodeStatic.h"
+#include "TreeStatic.h"
+#include "TreeDynamic.h"
 
 int main() {
 
-    NodeStatic root;
-    root.treeTest();
+    TreeStatic staticTree;
+    staticTree.getRoot()->treeTest();
 
+    std::cout << "\n";
+
+    TreeDynamic *dynamicTree = new TreeDynamic();
+    dynamicTree->getRoot()->setValue(5);
+    dynamicTree->getRoot()->addChild(10);
+    dynamicTree->getRoot()->addChild(15);
+    dynamicTree->printTree();
+
+    delete dynamicTree;
 
     return 0;
 }

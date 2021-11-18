@@ -8,7 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/bodzisz/University/EffectiveProgrammingTechniques/List03/NodeDynamic.cpp" "/home/bodzisz/University/EffectiveProgrammingTechniques/List03/cmake-build-debug/CMakeFiles/List03.dir/NodeDynamic.cpp.o"
   "/home/bodzisz/University/EffectiveProgrammingTechniques/List03/NodeStatic.cpp" "/home/bodzisz/University/EffectiveProgrammingTechniques/List03/cmake-build-debug/CMakeFiles/List03.dir/NodeStatic.cpp.o"
+  "/home/bodzisz/University/EffectiveProgrammingTechniques/List03/TreeDynamic.cpp" "/home/bodzisz/University/EffectiveProgrammingTechniques/List03/cmake-build-debug/CMakeFiles/List03.dir/TreeDynamic.cpp.o"
+  "/home/bodzisz/University/EffectiveProgrammingTechniques/List03/TreeStatic.cpp" "/home/bodzisz/University/EffectiveProgrammingTechniques/List03/cmake-build-debug/CMakeFiles/List03.dir/TreeStatic.cpp.o"
   "/home/bodzisz/University/EffectiveProgrammingTechniques/List03/main.cpp" "/home/bodzisz/University/EffectiveProgrammingTechniques/List03/cmake-build-debug/CMakeFiles/List03.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

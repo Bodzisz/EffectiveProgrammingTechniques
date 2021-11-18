@@ -12,7 +12,22 @@ NodeStatic::NodeStatic()
 
 NodeStatic::NodeStatic(int value)
 {
+    parent = NULL;
     this->value = value;
+}
+
+NodeStatic::NodeStatic(int value, NodeStatic *parent)
+{
+    this->parent = parent;
+    this->value = value;
+}
+
+NodeStatic::~NodeStatic()
+{
+//    if(parent != NULL)
+//    {
+//        delete parent;
+//    }
 }
 
 void NodeStatic::setValue(int newValue)
@@ -63,9 +78,10 @@ void NodeStatic::printAllBelowRecursion(std::queue<NodeStatic> printQueue)
     }
 }
 
-void NodeStatic::addChild(int value)
+void NodeStatic::addChild(int childValue)
 {
-    children.push_back(NodeStatic(value));
+    NodeStatic child(childValue, this);
+    children.emplace_back(child);
 }
 
 void NodeStatic::treeTest()
@@ -86,8 +102,6 @@ void NodeStatic::treeTest()
     root.getChild(0)->getChild(0)->printUp();
 }
 
-NodeStatic::~NodeStatic() {}
-
 void NodeStatic::printUp()
 {
     print();
@@ -96,6 +110,8 @@ void NodeStatic::printUp()
         parent->printUp();
     }
 }
+
+
 
 
 

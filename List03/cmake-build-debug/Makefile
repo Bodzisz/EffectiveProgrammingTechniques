@@ -129,6 +129,30 @@ List03/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/List03.dir/build.make CMakeFiles/List03.dir/build
 .PHONY : List03/fast
 
+NodeDynamic.o: NodeDynamic.cpp.o
+.PHONY : NodeDynamic.o
+
+# target to build an object file
+NodeDynamic.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/List03.dir/build.make CMakeFiles/List03.dir/NodeDynamic.cpp.o
+.PHONY : NodeDynamic.cpp.o
+
+NodeDynamic.i: NodeDynamic.cpp.i
+.PHONY : NodeDynamic.i
+
+# target to preprocess a source file
+NodeDynamic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/List03.dir/build.make CMakeFiles/List03.dir/NodeDynamic.cpp.i
+.PHONY : NodeDynamic.cpp.i
+
+NodeDynamic.s: NodeDynamic.cpp.s
+.PHONY : NodeDynamic.s
+
+# target to generate assembly for a file
+NodeDynamic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/List03.dir/build.make CMakeFiles/List03.dir/NodeDynamic.cpp.s
+.PHONY : NodeDynamic.cpp.s
+
 NodeStatic.o: NodeStatic.cpp.o
 .PHONY : NodeStatic.o
 
@@ -152,6 +176,54 @@ NodeStatic.s: NodeStatic.cpp.s
 NodeStatic.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/List03.dir/build.make CMakeFiles/List03.dir/NodeStatic.cpp.s
 .PHONY : NodeStatic.cpp.s
+
+TreeDynamic.o: TreeDynamic.cpp.o
+.PHONY : TreeDynamic.o
+
+# target to build an object file
+TreeDynamic.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/List03.dir/build.make CMakeFiles/List03.dir/TreeDynamic.cpp.o
+.PHONY : TreeDynamic.cpp.o
+
+TreeDynamic.i: TreeDynamic.cpp.i
+.PHONY : TreeDynamic.i
+
+# target to preprocess a source file
+TreeDynamic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/List03.dir/build.make CMakeFiles/List03.dir/TreeDynamic.cpp.i
+.PHONY : TreeDynamic.cpp.i
+
+TreeDynamic.s: TreeDynamic.cpp.s
+.PHONY : TreeDynamic.s
+
+# target to generate assembly for a file
+TreeDynamic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/List03.dir/build.make CMakeFiles/List03.dir/TreeDynamic.cpp.s
+.PHONY : TreeDynamic.cpp.s
+
+TreeStatic.o: TreeStatic.cpp.o
+.PHONY : TreeStatic.o
+
+# target to build an object file
+TreeStatic.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/List03.dir/build.make CMakeFiles/List03.dir/TreeStatic.cpp.o
+.PHONY : TreeStatic.cpp.o
+
+TreeStatic.i: TreeStatic.cpp.i
+.PHONY : TreeStatic.i
+
+# target to preprocess a source file
+TreeStatic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/List03.dir/build.make CMakeFiles/List03.dir/TreeStatic.cpp.i
+.PHONY : TreeStatic.cpp.i
+
+TreeStatic.s: TreeStatic.cpp.s
+.PHONY : TreeStatic.s
+
+# target to generate assembly for a file
+TreeStatic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/List03.dir/build.make CMakeFiles/List03.dir/TreeStatic.cpp.s
+.PHONY : TreeStatic.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -186,9 +258,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... List03"
+	@echo "... NodeDynamic.o"
+	@echo "... NodeDynamic.i"
+	@echo "... NodeDynamic.s"
 	@echo "... NodeStatic.o"
 	@echo "... NodeStatic.i"
 	@echo "... NodeStatic.s"
+	@echo "... TreeDynamic.o"
+	@echo "... TreeDynamic.i"
+	@echo "... TreeDynamic.s"
+	@echo "... TreeStatic.o"
+	@echo "... TreeStatic.i"
+	@echo "... TreeStatic.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

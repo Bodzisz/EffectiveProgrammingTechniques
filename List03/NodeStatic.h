@@ -19,13 +19,14 @@ private:
 public:
     NodeStatic();
     NodeStatic(int value);
+    NodeStatic(int value, NodeStatic *parent);
     ~NodeStatic();
 
     void setValue(int newValue);
 
     int getChildrenNumber() const;
     NodeStatic *getChild(int offset);
-    void addChild(int value);
+    void addChild(int childValue);
 
     void print();
     void printAllBelow();
