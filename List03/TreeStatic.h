@@ -19,6 +19,7 @@ public:
 
     NodeStatic *getRoot();
     void printTree();
+    void moveSubtree(NodeStatic *parentNode, NodeStatic *newChildNode);
 };
 
 

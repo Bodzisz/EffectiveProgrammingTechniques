@@ -13,8 +13,14 @@ int main() {
     staticTree2.getRoot()->addChild(2);
     staticTree2.getRoot()->getChild(0)->addChild(3);
     staticTree2.getRoot()->getChild(0)->getChild(0)->addChild(4);
+    std::cout << "BEFORE:" << std::endl;
+    staticTree.printTree();
+    std::cout << "\n";
+    staticTree2.printTree();
+    std::cout << "\n";
 
-    staticTree.getRoot()->moveSubtree(staticTree.getRoot()->getChild(0), staticTree2.getRoot()->getChild(0));
+    staticTree.moveSubtree(staticTree.getRoot()->getChild(0), staticTree2.getRoot()->getChild(0));
+    std::cout << "AFTER:" << std::endl;
     staticTree.printTree();
     std::cout << "\n";
     staticTree2.printTree();
@@ -35,7 +41,15 @@ int main() {
     dynamicTree2->getRoot()->addChild(3);
     dynamicTree2->getRoot()->getChild(0)->addChild(4);
 
+    std::cout << "BEFORE:" << std::endl;
+    dynamicTree->printTree();
+    std::cout << "\n";
+    dynamicTree2->printTree();
+    std::cout << "\n";
+
+
     dynamicTree->moveSubtree(dynamicTree->getRoot()->getChild(0), dynamicTree2->getRoot()->getChild(0));
+    std::cout << "AFTER:" << std::endl;
     dynamicTree->printTree();
     std::cout << "\n";
     dynamicTree2->printTree();

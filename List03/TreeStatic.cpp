@@ -20,3 +20,8 @@ void TreeStatic::printTree()
 {
     root.printAllBelow();
 }
+
+void TreeStatic::moveSubtree(NodeStatic *parentNode, NodeStatic *newChildNode)
+{
+    root.moveSubtree(parentNode, newChildNode);
+}
