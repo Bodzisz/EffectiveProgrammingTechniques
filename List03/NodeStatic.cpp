@@ -123,21 +123,27 @@ bool NodeStatic::moveSubtree(NodeStatic *parentNode, NodeStatic *newChildNode)
 
     if(newChildNode->parent != NULL)
     {
-        int index;
-        for (int i = 0; i < newChildNode->parent->getChildrenNumber(); i++)
-        {
-            if (&(newChildNode->parent->children[i]) == newChildNode)
-            {
-                index = i;
-                break;
-            }
-        }
-        newChildNode->parent->children.erase(newChildNode->parent->children.begin() + index);
+        newChildNode->parent->removeChild(newChildNode);
     }
 
     newChildNode->parent = parentNode;
     return true;
 }
+
+bool NodeStatic::removeChild(NodeStatic *child)
+{
+    for(int i = 0; i < getChildrenNumber(); i++)
+    {
+        if(child == &children[i])
+        {
+            children.erase(children.begin() + i);
+            return true;
+        }
+    }
+    return false;
+}
+
+
 
 
 

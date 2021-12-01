@@ -28,6 +28,7 @@ public:
     NodeStatic *getChild(int offset);
     void addChild(int childValue);
     void addChild(NodeStatic *child);
+    bool removeChild(NodeStatic *child);
 
     void print();
     void printAllBelow();

@@ -25,10 +25,11 @@ public:
     ~NodeDynamic();
 
     void setValue(int newValue);
-    int getChildrenNumber() const;
+    int getChildrenNumber();
     void addChild(int childValue);
     void addChild(NodeDynamic *child);
     NodeDynamic *getChild(int offset);
+    bool removeChild(NodeDynamic *child);
 
     void print();
     void printAllBelow();

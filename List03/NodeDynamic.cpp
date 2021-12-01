@@ -26,18 +26,6 @@ NodeDynamic::~NodeDynamic()
 {
     for(int i = 0; i < getChildrenNumber(); i++)
     {
-        children[i]->deleteChildren();
-    }
-}
-
-void NodeDynamic::deleteChildren()
-{
-    for(int i = 0; i < getChildrenNumber(); i++)
-    {
-        if(children[i]->getChildrenNumber() != 0)
-        {
-            children[i]->deleteChildren();
-        }
         delete children[i];
     }
 }
@@ -47,7 +35,7 @@ void NodeDynamic::setValue(int newValue)
     value = newValue;
 }
 
-int NodeDynamic::getChildrenNumber() const
+int NodeDynamic::getChildrenNumber()
 {
     return children.size();
 }
@@ -110,22 +98,26 @@ bool NodeDynamic::moveSubtree(NodeDynamic *parentNode, NodeDynamic *newChildNode
 
     if(newChildNode->parent != NULL)
     {
-        int index;
-        for (int i = 0; i < newChildNode->parent->children.size(); i++)
-        {
-            if (newChildNode->parent->children[i] == newChildNode)
-            {
-                index = i;
-                break;
-            }
-        }
-        newChildNode->parent->children.erase(newChildNode->parent->children.begin() + index);
+        newChildNode->parent->removeChild(newChildNode);
     }
 
     newChildNode->parent = parentNode;
     parentNode->addChild(newChildNode);
     return true;
 
+}
+
+bool NodeDynamic::removeChild(NodeDynamic *child)
+{
+    for(int i = 0; i < getChildrenNumber(); i++)
+    {
+        if(children[i] == child)
+        {
+            children.erase(children.begin() + i);
+            return true;
+        }
+    }
+    return false;
 }
 
 
