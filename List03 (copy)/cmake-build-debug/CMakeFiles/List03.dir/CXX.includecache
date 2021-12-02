@@ -1,0 +1,48 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/NodeDynamic.h
+iostream
+-
+vector
+-
+queue
+-
+
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/NodeStatic.cpp
+NodeStatic.h
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/NodeStatic.h
+
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/NodeStatic.h
+vector
+-
+queue
+-
+iostream
+-
+
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/TreeDynamic.h
+NodeDynamic.h
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/NodeDynamic.h
+
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/TreeStatic.cpp
+TreeStatic.h
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/TreeStatic.h
+
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/TreeStatic.h
+NodeStatic.h
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/NodeStatic.h
+
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/main.cpp
+iostream
+-
+TreeStatic.h
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/TreeStatic.h
+TreeDynamic.h
+/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/TreeDynamic.h
+

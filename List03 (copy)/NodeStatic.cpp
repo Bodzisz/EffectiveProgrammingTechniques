@@ -123,7 +123,16 @@ bool NodeStatic::moveSubtree(NodeStatic *parentNode, NodeStatic *newChildNode)
 
     if(newChildNode->parent != NULL)
     {
-        newChildNode->parent->removeChild(newChildNode);
+        int index;
+        for (int i = 0; i < newChildNode->parent->getChildrenNumber(); i++)
+        {
+            if (&(newChildNode->parent->children[i]) == newChildNode)
+            {
+                index = i;
+                break;
+            }
+        }
+        newChildNode->parent->children.erase(newChildNode->parent->children.begin() + index);
     }
 
     newChildNode->parent = parentNode;
@@ -135,23 +144,13 @@ void NodeStatic::setParent(NodeStatic *parent) {
     this->parent = parent;
 }
 
+void NodeStatic::setChildren(std::vector<NodeStatic> children) {
+    this->children = children;
+}
+
 std::vector<NodeStatic> *NodeStatic::getChildren() {
     return &children;
 }
-
-bool NodeStatic::removeChild(NodeStatic *child)
-{
-    for(int i = 0; i < getChildrenNumber(); i++)
-    {
-        if(child == &children[i])
-        {
-            children.erase(children.begin() + i);
-            return true;
-        }
-    }
-    return false;
-}
-
 
 
 

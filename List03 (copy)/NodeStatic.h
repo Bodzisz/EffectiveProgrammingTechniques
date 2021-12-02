@@ -25,12 +25,13 @@ public:
     void setValue(int newValue);
 
     int getChildrenNumber() const;
-    NodeStatic *getChild(int offset);
     std::vector<NodeStatic> *getChildren();
+    NodeStatic *getChild(int offset);
     void addChild(int childValue);
     void addChild(NodeStatic *child);
     void setParent(NodeStatic *parent);
-    bool removeChild(NodeStatic *child);
+    void setChildren(std::vector<NodeStatic> children);
+
 
     void print();
     void printAllBelow();

@@ -25,14 +25,14 @@ public:
     ~NodeDynamic();
 
     void setValue(int newValue);
-    int getChildrenNumber();
+    int getChildrenNumber() const;
     void addChild(int childValue);
     void addChild(NodeDynamic *child);
     NodeDynamic *getChild(int offset);
-    bool removeChild(NodeDynamic *child);
 
     void print();
     void printAllBelow();
+    void deleteChildren();
     bool moveSubtree(NodeDynamic *parentNode, NodeDynamic *newChildNode);
 
 private:
