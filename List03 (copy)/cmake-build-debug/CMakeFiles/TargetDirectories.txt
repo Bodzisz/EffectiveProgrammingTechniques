@@ -1,3 +1,0 @@
-/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/bodzisz/University/EffectiveProgrammingTechniques/List03 (copy)/cmake-build-debug/CMakeFiles/List03.dir
