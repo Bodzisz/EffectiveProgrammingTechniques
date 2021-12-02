@@ -26,18 +26,6 @@ NodeDynamic::~NodeDynamic()
 {
     for(int i = 0; i < getChildrenNumber(); i++)
     {
-        children[i]->deleteChildren();
-    }
-}
-
-void NodeDynamic::deleteChildren()
-{
-    for(int i = 0; i < getChildrenNumber(); i++)
-    {
-        if(children[i]->getChildrenNumber() != 0)
-        {
-            children[i]->deleteChildren();
-        }
         delete children[i];
     }
 }
