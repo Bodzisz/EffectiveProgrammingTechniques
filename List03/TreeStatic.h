@@ -6,11 +6,14 @@
 #define LIST03_TREESTATIC_H
 
 #include "NodeStatic.h"
+#include <vector>
 
 
 class TreeStatic
 {
 private:
+    TreeStatic(NodeStatic *root);
+
     NodeStatic root;
 
 public:
@@ -20,6 +23,7 @@ public:
     NodeStatic *getRoot();
     void printTree();
     void moveSubtree(NodeStatic *parentNode, NodeStatic *newChildNode);
+    std::vector<TreeStatic> split_trees(NodeStatic *node);
 };
 
 

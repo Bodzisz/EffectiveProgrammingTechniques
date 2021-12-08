@@ -26,8 +26,10 @@ public:
 
     int getChildrenNumber() const;
     NodeStatic *getChild(int offset);
+    std::vector<NodeStatic> *getChildren();
     void addChild(int childValue);
     void addChild(NodeStatic *child);
+    void setParent(NodeStatic *parent);
     bool removeChild(NodeStatic *child);
 
     void print();

@@ -130,6 +130,15 @@ bool NodeStatic::moveSubtree(NodeStatic *parentNode, NodeStatic *newChildNode)
     return true;
 }
 
+
+void NodeStatic::setParent(NodeStatic *parent) {
+    this->parent = parent;
+}
+
+std::vector<NodeStatic> *NodeStatic::getChildren() {
+    return &children;
+}
+
 bool NodeStatic::removeChild(NodeStatic *child)
 {
     for(int i = 0; i < getChildrenNumber(); i++)
