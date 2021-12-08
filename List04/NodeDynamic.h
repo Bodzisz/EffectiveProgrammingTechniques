@@ -90,9 +90,11 @@ template<typename T> NodeDynamic<T>* NodeDynamic<T>::getRoot() {
 template<typename T> void NodeDynamic<T>::addChild(T childValue) {
     children.emplace_back(new NodeDynamic<T>(childValue, this));
 }
+
 template<typename T> void NodeDynamic<T>::addChild(NodeDynamic<T>* child) {
     children.emplace_back(child);
 }
+
 template<typename T> bool NodeDynamic<T>::removeChild(NodeDynamic<T>* child) {
     for(int i = 0; i < getChildrenNumber(); i++)
     {
@@ -104,9 +106,11 @@ template<typename T> bool NodeDynamic<T>::removeChild(NodeDynamic<T>* child) {
     }
     return false;
 }
+
 template<typename T> void NodeDynamic<T>::print() {
     std::cout << " " << value;
 }
+
 template<typename T> void NodeDynamic<T>::printAllBelow() {
     std::queue<NodeDynamic*> printQueue;
     print();
@@ -116,6 +120,7 @@ template<typename T> void NodeDynamic<T>::printAllBelow() {
     }
     printAllBelowRecursion(printQueue);
 }
+
 template<typename T> bool NodeDynamic<T>::moveSubtree(NodeDynamic *parentNode, NodeDynamic *newChildNode) {
     if(parentNode == NULL || newChildNode == NULL || parentNode->getRoot() == newChildNode->getRoot())
     {
