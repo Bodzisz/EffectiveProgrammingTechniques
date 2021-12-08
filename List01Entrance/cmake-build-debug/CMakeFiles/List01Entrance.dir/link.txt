@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/List01Entrance.dir/main.cpp.o CMakeFiles/List01Entrance.dir/Person.cpp.o -o List01Entrance 
