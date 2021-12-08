@@ -33,7 +33,6 @@ public:
 
     void print();
     void printAllBelow();
-    void deleteChildren();
     bool moveSubtree(NodeDynamic *parentNode, NodeDynamic *newChildNode);
 
 private:

@@ -85,7 +85,6 @@ void NodeDynamic::printAllBelowRecursion(std::queue<NodeDynamic*> printQueue)
         }
         printQueue.pop();
         printAllBelowRecursion(printQueue);
-
     }
 }
 
