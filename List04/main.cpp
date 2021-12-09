@@ -1,5 +1,6 @@
 #include <iostream>
 #include "TreeDynamic.h"
+#include <string>
 
 int main()
 {
@@ -34,6 +35,13 @@ int main()
     NodeDynamic<int> *node = numberTree1.getRoot()->getChild(0)->getChild(0)->getChild(1)->getChild(0);
     std::cout << node->getValue() << std::endl;
     std::cout << node->getRoot()->getValue();
+    std::cout << "\n\n";
+
+    TreeDynamic<std::string> stringTree("HELLO");
+    stringTree.getRoot()->addChild("WORLD");
+    stringTree.getRoot()->addChild("123");
+    stringTree.getRoot()->getChild(0)->addChild("FOO");
+    stringTree.printTree();
 
     return 0;
 }
