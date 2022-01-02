@@ -3,4 +3,4 @@ project(List05)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(List05 main.cpp MySmartPointer.h MySmartPointerImpl.h RefCounter.cpp RefCounter.h)
+add_executable(List05 main.cpp MySmartPointer.h MySmartPointerImpl.h RefCounter.cpp RefCounter.h Tab.cpp Tab.h)
